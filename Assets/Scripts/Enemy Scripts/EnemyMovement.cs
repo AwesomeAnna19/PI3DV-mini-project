@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour
 {
-    GameObject player;
+    public GameObject player;
     Rigidbody currRb;
     float speed = 30f;
 
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player");
+        //player = GameObject.FindGameObjectWithTag("Player");
         currRb = transform.GetComponent<Rigidbody>();
     }
 

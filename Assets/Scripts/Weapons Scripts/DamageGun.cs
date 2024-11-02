@@ -14,7 +14,8 @@ public class DamageGun : MonoBehaviour
         PlayerCamera = Camera.main.transform;
     }
 
-    public void Shoot()
+    // This is the raycast that I made in te beginning, but I don't use it anymore.
+    /*public void Shoot()
     {
         Ray gunRay = new Ray(PlayerCamera.position, PlayerCamera.forward);
         if (Physics.Raycast(gunRay, out RaycastHit hitInfo, BulletRange))
@@ -24,5 +25,5 @@ public class DamageGun : MonoBehaviour
                 enemy.Health -= Damage;
             }
         }
-    }
+    }*/
 }

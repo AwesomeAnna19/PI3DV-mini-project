@@ -7,6 +7,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] private float StartingHealth;
     private float health;
 
+    // This code with the get and set functions allows acces to a private variable without directly changing the private variable in other scripts.
     public float Health
     {
         get

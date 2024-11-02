@@ -326,6 +326,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1 &831295402
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 831295403}
+  m_Layer: 0
+  m_Name: BulletSpawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &831295403
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 831295402}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: -0.008, y: 1.58, z: -0}
+  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2108327191}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -774,8 +805,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 602618235182660565, guid: b78bd3a2f9a249c40a7d3b8e9284fd03, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 549708037}
     - target: {fileID: 3217999988406267193, guid: b78bd3a2f9a249c40a7d3b8e9284fd03, type: 3}
       propertyPath: m_Name
+      value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 3217999988406267193, guid: b78bd3a2f9a249c40a7d3b8e9284fd03, type: 3}
+      propertyPath: m_TagString
       value: Enemy
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -816,7 +855,8 @@ Transform:
   m_LocalPosition: {x: 0.7, y: -0.5, z: 0.5}
   m_LocalScale: {x: 0.5, y: 1, z: 0.5}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 831295403}
   m_Father: {fileID: 963194228}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!114 &2108327193
@@ -834,7 +874,7 @@ MonoBehaviour:
   OnGunShoot:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2108327197}
+      - m_Target: {fileID: 2108327193}
         m_TargetAssemblyTypeName: DamageGun, Assembly-CSharp
         m_MethodName: Shoot
         m_Mode: 1
@@ -847,7 +887,10 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   FireCoolDown: 0
-  Automatic: 0
+  Automatic: 1
+  bulletSpeed: 10
+  bulletSpawnPoint: {fileID: 831295403}
+  bulletPrefab: {fileID: 5633374348575850459, guid: 309539b2c052186499f915c03cc7419f, type: 3}
 --- !u!136 &2108327194
 CapsuleCollider:
   m_ObjectHideFlags: 0
