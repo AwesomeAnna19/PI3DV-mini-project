@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DamageGunBehavior : MonoBehaviour
+public class DamageGun : MonoBehaviour
 {
     public float Damage;
     public float BulletRange;

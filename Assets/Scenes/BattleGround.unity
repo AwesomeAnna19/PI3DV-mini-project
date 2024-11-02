@@ -796,7 +796,7 @@ GameObject:
   - component: {fileID: 2108327195}
   - component: {fileID: 2108327194}
   - component: {fileID: 2108327193}
-  - component: {fileID: 2108327192}
+  - component: {fileID: 2108327197}
   m_Layer: 0
   m_Name: Gunny gun
   m_TagString: Untagged
@@ -819,20 +819,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 963194228}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
---- !u!114 &2108327192
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2108327190}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70af22624ee1fbe428b46347f4d0c89f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Damage: 1
-  BulletRange: 5000
 --- !u!114 &2108327193
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -848,8 +834,8 @@ MonoBehaviour:
   OnGunShoot:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2108327192}
-        m_TargetAssemblyTypeName: DamageGunBehavior, Assembly-CSharp
+      - m_Target: {fileID: 2108327197}
+        m_TargetAssemblyTypeName: DamageGun, Assembly-CSharp
         m_MethodName: Shoot
         m_Mode: 1
         m_Arguments:
@@ -935,6 +921,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2108327190}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &2108327197
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2108327190}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70af22624ee1fbe428b46347f4d0c89f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Damage: 1
+  BulletRange: 5000
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
