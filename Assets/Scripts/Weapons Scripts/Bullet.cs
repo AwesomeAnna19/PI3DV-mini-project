@@ -5,16 +5,6 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    // This is the "lifespan" of the bullet - so after 3 seconds it will "die".
-    public float life = 3f;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        // When the game starts the bullets are destroyed (so just "invisible").
-        Destroy(gameObject, life);
-    }
-
     void OnCollisionEnter(Collision collision)
     {
         // This code checks if the game object "enemyObject" has a tag of the enemy.

@@ -14,7 +14,7 @@ public class DamageGun : MonoBehaviour
         PlayerCamera = Camera.main.transform;
     }
 
-    // This is the raycast that I made in te beginning, but I don't use it anymore.
+    // This is the raycast that I made in the beginning, but I don't use it anymore.
     /*public void Shoot()
     {
         Ray gunRay = new Ray(PlayerCamera.position, PlayerCamera.forward);
