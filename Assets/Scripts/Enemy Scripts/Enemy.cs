@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    [SerializeField] public float MaxHealth;
     [SerializeField] FloatingHealthBar healthBar;
     public float health;
+    public float MaxHealth = 10f;
 
     // This code with the get and set functions allows acces to a private variable without directly changing the private variable in other scripts.
     public float Health
