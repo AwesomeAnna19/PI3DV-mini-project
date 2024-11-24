@@ -19,13 +19,13 @@ public class Gun : MonoBehaviour
     private float CurrentCoolDown;
 
     // This is the speed of the bullets when they are being shot.
-    public float bulletSpeed = 20f;
+    //public float bulletSpeed = 20f;
 
     // This where the bullets will come out from (in my case the tip of the gun).
-    public Transform bulletSpawnPoint;
+    //public Transform bulletSpawnPoint;
 
     // This is the prefab of the bullets.
-    public GameObject bulletPrefab;
+    //public GameObject bulletPrefab;
 
 
     // Start is called before the first frame update
@@ -53,10 +53,10 @@ public class Gun : MonoBehaviour
                     CurrentCoolDown = FireCoolDown;
 
                     // This code instantiates the prefab of the bullets, and the position and rotation of the where the bullets are coming from.
-                    GameObject bullet = Instantiate(bulletPrefab, bulletSpawnPoint.position, bulletSpawnPoint.rotation);
+                    //GameObject bullet = Instantiate(bulletPrefab, bulletSpawnPoint.position, bulletSpawnPoint.rotation);
 
                     // This code fetches for the bullet's rigidbody and gives the bullets their position to go forward with the speed of the bullets.
-                    bullet.GetComponent<Rigidbody>().velocity = bulletSpawnPoint.forward * bulletSpeed;
+                    //bullet.GetComponent<Rigidbody>().velocity = bulletSpawnPoint.forward * bulletSpeed;
                 }
             }
         }
@@ -72,10 +72,10 @@ public class Gun : MonoBehaviour
                     CurrentCoolDown = FireCoolDown;
 
                     // This code instantiates the prefab of the bullets, and the position and rotation of the where the bullets are coming from.
-                    GameObject bullet = Instantiate(bulletPrefab, bulletSpawnPoint.position, bulletSpawnPoint.rotation);
+                    //GameObject bullet = Instantiate(bulletPrefab, bulletSpawnPoint.position, bulletSpawnPoint.rotation);
 
                     // This code fetches for the bullet's rigidbody and gives the bullets their position to go forward with the speed of the bullets.
-                    bullet.GetComponent<Rigidbody>().velocity = bulletSpawnPoint.forward * bulletSpeed;
+                    //bullet.GetComponent<Rigidbody>().velocity = bulletSpawnPoint.forward * bulletSpeed;
                 }
             }
         }

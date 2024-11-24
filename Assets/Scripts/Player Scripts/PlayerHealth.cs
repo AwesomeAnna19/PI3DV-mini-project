@@ -1,10 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
     [SerializeField] FloatingHealthBar healthBar;
+    [SerializeField] GameOverScreen gameOverScreen;
+    [SerializeField] PlayerCam playerCamera;
     public float health;
     public float MaxHealth = 20f;
 
@@ -21,9 +24,10 @@ public class PlayerHealth : MonoBehaviour
             Debug.Log(health);
             healthBar.UpdateHealthBar(health, MaxHealth);
 
-            if (health < 0f)
+            if (health <= 0f)
             {
-                Destroy(gameObject);
+                Die();
+                Debug.Log("You're dead!");
             }
         }
     }
@@ -33,5 +37,21 @@ public class PlayerHealth : MonoBehaviour
     {
         Health = MaxHealth;
         healthBar = GetComponentInChildren<FloatingHealthBar>();
+    }
+
+    private void Die()
+    {
+        if (playerCamera != null)
+        {
+            playerCamera.enabled = false;
+        }
+
+        SceneManager.LoadScene("GameOverScreen");
+
+        // These two codes make sure that I only can use the mouse cursor when the game over screen occurs.
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+
+        Destroy(gameObject);
     }
 }

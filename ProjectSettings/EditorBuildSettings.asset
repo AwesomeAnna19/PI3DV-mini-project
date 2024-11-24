@@ -6,12 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/BattleGround.unity
-    guid: 3db54ff67bd93b541804b9fb4e0274ff
+    path: Assets/Scenes/CharacterSwap.unity
+    guid: f3520e72d3e29b841ad095ee1d92c1bc
   - enabled: 1
     path: Assets/Scenes/BattleGround (testing).unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
-    path: Assets/Scenes/CharacterSwap.unity
-    guid: f3520e72d3e29b841ad095ee1d92c1bc
+    path: Assets/Scenes/GameOverScreen.unity
+    guid: 9d8266e9f011ef746a26fbbae4aa9594
+  - enabled: 1
+    path: Assets/Scenes/BattleGround.unity
+    guid: 3db54ff67bd93b541804b9fb4e0274ff
   m_configObjects: {}

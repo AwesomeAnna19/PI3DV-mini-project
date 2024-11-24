@@ -21,7 +21,7 @@ public class Enemy : MonoBehaviour
             Debug.Log(health);
             healthBar.UpdateHealthBar(health, MaxHealth);
 
-            if (health < 0f)
+            if (health <= 0f)
             {
                 Destroy(gameObject);
             }

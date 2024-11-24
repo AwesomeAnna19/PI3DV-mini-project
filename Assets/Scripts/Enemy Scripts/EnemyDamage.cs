@@ -4,13 +4,12 @@ using UnityEngine;
 
 public class EnemyDamage : MonoBehaviour
 {
-    public GameObject playerObject1;
-    public GameObject playerObject2;
+    GameObject playerObject;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        playerObject = GameObject.FindGameObjectWithTag("Player");
     }
 
     // Update is called once per frame
@@ -24,13 +23,11 @@ public class EnemyDamage : MonoBehaviour
         // This code checks if the game object "playerObject" has a tag of the enemy.
         if (collision.gameObject.CompareTag("Player"))
         {
-            // This saves the game object as a variable.
-            playerObject1 = collision.gameObject;
-            playerObject2 = collision.gameObject;
+            // This saves the game object as a variable, and something that I can collide with.
+            playerObject = collision.gameObject;
 
             // Here I fetch for the PlayerHealth script and use the Health get and set functions and minus 1 each time I shoot a bullet on the enemy.
-            playerObject1.GetComponent<PlayerHealth>().Health--;
-            playerObject2.GetComponent<PlayerHealth>().Health--;
+            playerObject.GetComponent<PlayerHealth>().Health--;
         }
     }
 }
