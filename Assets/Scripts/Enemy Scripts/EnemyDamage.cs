@@ -12,12 +12,6 @@ public class EnemyDamage : MonoBehaviour
         playerObject = GameObject.FindGameObjectWithTag("Player");
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     void OnCollisionEnter(Collision collision)
     {
         // This code checks if the game object "playerObject" has a tag of the enemy.

@@ -14,10 +14,4 @@ public class FloatingHealthBar : MonoBehaviour
         // This code then takes the two arguments and divide them by each other, and then puts them as the slider's value.
         slider.value = currentValue / maxValue;
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

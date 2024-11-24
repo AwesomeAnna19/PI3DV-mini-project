@@ -36,22 +36,6 @@ public class PickUpHealthPack : MonoBehaviour
         }*/
     }
 
-    /*void CheckAmountOfHealth()
-    {
-        if (hit.transform.tag == "HealthPack")
-        {
-            if (playerHealth.health < playerHealth.MaxHealth)
-            {
-                PickUpHealth();
-            }
-            else
-            {
-                pickUpInfo = "Health Full!";
-                Debug.Log(pickUpInfo);
-            }
-        }
-    }*/
-
     void OnCollisionEnter(Collision collision)
     {
         // This code checks if the game object "playerObject" has a tag of the health pack.
@@ -65,24 +49,4 @@ public class PickUpHealthPack : MonoBehaviour
             healthBar.UpdateHealthBar(playerHealth.health, playerHealth.MaxHealth);
         }
     }
-
-    // This function will make the player pick up the health packs.
-    /*void PickUpHealth()
-    {
-        // This makes sure that the player's health won't go over the max health.
-        if (playerHealth.health + healAmount > playerHealth.MaxHealth)
-        {
-            playerHealth.health = playerHealth.MaxHealth;
-        }
-        else // If the thing above does not happen, then the player's health will just increase with using the Healing function.
-        {
-            playerHealth.health += healAmount;
-        }
-
-        healthBar.UpdateHealthBar(playerHealth.health, playerHealth.MaxHealth);
-
-        Destroy(hit.transform.gameObject);
-
-        Debug.Log("Health Pack Picked Up!");
-    }*/
 }

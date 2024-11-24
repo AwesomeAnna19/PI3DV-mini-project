@@ -41,12 +41,6 @@ public class CharacterSwap : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     // Here we write the code for the left button. So when the left button is being pressed, it will go though the indices backwards.
     public void ToggleLeftButton()
     {
@@ -92,6 +86,6 @@ public class CharacterSwap : MonoBehaviour
         PlayerPrefs.SetInt("CharacterSelected", index);
 
         // Here we assign which scene we want to go to, when pressing the confirm button, that is the BattleGround scene.
-        SceneManager.LoadScene("BattleGround (testing)");
+        SceneManager.LoadScene("BattleGround");
     }
 }

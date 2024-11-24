@@ -9,7 +9,7 @@ public class GameOverScreen : MonoBehaviour
 
     public void RestartButton()
     {
-        SceneManager.LoadScene("BattleGround (testing)");
+        SceneManager.LoadScene("BattleGround");
     }
 
     public void MainMenuButton()
