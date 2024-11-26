@@ -18,6 +18,12 @@ public class Gun : MonoBehaviour
     // It will store the current cooldown of the given weapon instance
     private float CurrentCoolDown;
 
+    // This is for my particle when shooting.
+    public GameObject particlePrefab;
+
+    // This is where the particle will spawn when activated.
+    public Transform spawnPoint;
+
 
     // Start is called before the first frame update
     void Start()
@@ -42,6 +48,7 @@ public class Gun : MonoBehaviour
                     // If yes, then it invokes the ongoing shoot event handler
                     OnGunShoot?.Invoke();
                     CurrentCoolDown = FireCoolDown;
+                    ShootingSpawnParticle();
                 }
             }
         }
@@ -55,6 +62,7 @@ public class Gun : MonoBehaviour
                 {
                     OnGunShoot?.Invoke();
                     CurrentCoolDown = FireCoolDown;
+                    ShootingSpawnParticle();
                 }
             }
         }
@@ -63,4 +71,9 @@ public class Gun : MonoBehaviour
         CurrentCoolDown -= Time.deltaTime;
     }
 
+    public void ShootingSpawnParticle()
+    {
+        Instantiate(particlePrefab, spawnPoint.position, spawnPoint.rotation);
+        Destroy(particlePrefab);
+    }
 }
