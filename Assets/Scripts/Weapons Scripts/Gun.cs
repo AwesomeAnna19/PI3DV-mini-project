@@ -71,9 +71,9 @@ public class Gun : MonoBehaviour
         CurrentCoolDown -= Time.deltaTime;
     }
 
+    // This void will instantiate the particles that resembled shooting.
     public void ShootingSpawnParticle()
     {
         Instantiate(particlePrefab, spawnPoint.position, spawnPoint.rotation);
-        Destroy(particlePrefab);
     }
 }
