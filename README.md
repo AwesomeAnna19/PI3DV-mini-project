@@ -3,6 +3,7 @@ This is my 3rd semester's mini-project in "Programmering af interaktive 3D verde
 
 ## Little video of the game-play
 
+![Visual](PI3DV-mini-project-GamePlayExample.gif)
 
 ## The idea behind making the game
 I took inspiration from Bendy and the Ink Machine (BATIM), a game made by Joey Drew Studios, when making my game. But the inspiration is not completely taken from BATIM game itself, but instead taken from an April fools YouTube video, also made by Joey Drew Studios themselves (link: https://www.youtube.com/watch?v=ypHMXCDQvaA), that is called Bendy Royale. In the video you only see the different characters from BATIM, but with guns, grenades, missiles, etc.. So, what I wanted to make was my own version of that April fools YouTube video, aka. Bendy Royale.
