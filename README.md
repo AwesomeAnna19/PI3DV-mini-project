@@ -31,11 +31,11 @@ Here is a run-down of each part of my game:
 - SearcherEnemy ─ downloaded from https://sketchfab.com/3d-models/batim-searcher-87ae00fd8c1a49d4ab530910d0e000c9.
 - BendyStatue ─ https://sketchfab.com/3d-models/ch3-bendy-statue-f8995084a6fa4d39b064258fd203957a.
 ### Materials
-- These materials are used for the level, the ink machine, the inky puddles and the particles.
+- The materials are used for the level, the ink machine, the inky puddles and the particles.
 ### Prefabs
-- Here I have all the pefabs, that are the little red dot, the enemy, the particle for the automatic gun and another for the semi-firing gun.
+- Here I have all the prefabs, that are the little red dot, the enemy, the particle for the automatic gun and another for the semi-firing gun.
 ### Scenes
-- There are three scenes, that are BattleGround, CharacterSwap and GameOverScene.
+- There are three scenes; BattleGround, CharacterSwap and GameOverScene.
 ### ProBuilder
 - I made the whole level, except for the floor, with ProBuilder. I also 3D modelled the ink machine in ProBuilder.
 
